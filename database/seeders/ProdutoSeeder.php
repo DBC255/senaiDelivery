@@ -18,52 +18,60 @@ class ProdutoSeeder extends Seeder
             'Lanches' => [
                 [
                     'nome' => 'X-Burguer',
-                    'descricao' => 'pão, hamburguer, queijo e molho especial',
+                    'descricao' => 'Pão, hambúrguer, queijo e molho especial',
                     'preco' => 18.90,
                     'destaque' => true
                 ],
 
                 [
                     'nome' => 'X-Bacon',
-                    'descricao' => 'pão, hamburguer, queijo, bacon e salada',
-                    'preco' => 18.90,
+                    'descricao' => 'Pão, hambúrguer, queijo, bacon e salada',
+                    'preco' => 24.90,
                     'destaque' => true
                 ],
             ],
-            'Porcoes' => [
+
+            'Porções' => [
+
                 [
                     'nome' => 'Batata Frita',
-                    'descricao' => 'Porção de batatas fritas',
+                    'descricao' => 'Porção de Batata Frita',
                     'preco' => 22.90,
                     'destaque' => false
                 ],
 
                 [
-                    'nome' => 'Calabresa acebolada',
-                    'descricao' => 'calabresa fatiada com cebola',
-                    'preco' => 22.90,
+                    'nome' => 'Calabresa Acebolada',
+                    'descricao' => 'Calabresa fatiada com cebola',
+                    'preco' => 29.90,
                     'destaque' => true
-                ]
+                ],
+
             ],
+
             'Bebidas' => [
+
                 [
                     'nome' => 'Refrigerante',
-                    'descricao' => 'Refrigerante lata',
+                    'descricao' => 'Refrigerante Lata',
                     'preco' => 6.00,
                     'destaque' => false
                 ],
 
                 [
-                    'nome' => 'Suco de laranja',
+                    'nome' => 'Suco de Laranja',
                     'descricao' => 'Suco natural de laranja',
                     'preco' => 10.00,
                     'destaque' => true
-                ]
+                ],
+
             ],
+
             'Sobremesas' => [
+
                 [
-                    'nome' => 'Pudin',
-                    'descricao' => 'Fatia de pudin',
+                    'nome' => 'Pudim',
+                    'descricao' => 'Fatia de pudim',
                     'preco' => 9.90,
                     'destaque' => false
                 ],
@@ -73,16 +81,16 @@ class ProdutoSeeder extends Seeder
                     'descricao' => 'Sorvete com cobertura',
                     'preco' => 10.00,
                     'destaque' => true
-                ]
-            ]
+                ],
+
+            ],
+
         ];
 
         foreach ($produtos as $nomeCategoria => $itens) {
             $categoria = Categoria::where('nome', $nomeCategoria)->firstOrFail();
 
             foreach ($itens as $produto) {
-
-                
                 Produto::create(
                     [
                         'categoria_id' => $categoria->id,
@@ -94,7 +102,7 @@ class ProdutoSeeder extends Seeder
                         'destaque' => $produto['destaque']
                     ]
                 );
-            };
-        };
+            }
+        }
     }
 }

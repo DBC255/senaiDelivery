@@ -13,10 +13,11 @@ class Produto extends Model
         'preco',
         'caminho_imagem',
         'ativo',
-        'destaque',
+        'destaque'
     ];
 
-    public function categoria(){
+    public function categoria()
+    {
         return $this->belongsTo(Categoria::class);
     }
 }

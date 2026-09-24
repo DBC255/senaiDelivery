@@ -21,24 +21,25 @@ class CategoriaSeeder extends Seeder
         ]);
 
         Categoria::create([
-            'nome' => 'Porcoes',
-            'descricao' => 'porções Diversas',
+            'nome' => 'Porções',
+            'descricao' => 'Porções Diversas',
             'ativo' => true,
             'ordem_exibicao' => 2
         ]);
 
         Categoria::create([
             'nome' => 'Bebidas',
-            'descricao' => 'bebidas Diversas',
+            'descricao' => 'Bebidas Diversos',
             'ativo' => true,
             'ordem_exibicao' => 3
         ]);
 
         Categoria::create([
             'nome' => 'Sobremesas',
-            'descricao' => 'sobremesas Diversas',
+            'descricao' => 'Sobremesas Diversos',
             'ativo' => true,
             'ordem_exibicao' => 4
         ]);
+        
     }
 }

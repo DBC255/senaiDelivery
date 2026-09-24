@@ -21,6 +21,6 @@ class UsuarioSeeder extends Seeder
                 'password' => 'password',
                 'tipo' => User::TIPO_ADMIN
             ]
-            );
+        );
     }
 }
